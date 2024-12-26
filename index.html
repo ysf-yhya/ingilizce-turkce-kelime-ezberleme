@@ -1,17 +1,119 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <meta charset="utf-8">
-    <title>Flashcard Uygulaması</title>
+
+<html lang="tr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yoklama Takip</title>
+
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="card-container"></div>
-    <div class="form-container">
-      <textarea id="wordList" placeholder="Kelime: Anlamı" rows="5"></textarea>
-      <button id="runButton">Çalıştır</button>
-      <button id="clearButton">Temizle</button>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <h1>
+
+                <i class="fas fa-clipboard-check"></i>
+
+                Yoklama Takip
+
+            </h1>
+
+            <button id="yeniOgrenciBtn" class="primary-button">
+
+                <i class="fas fa-plus"></i>
+
+                Yeni Öğrenci Ekle
+
+            </button>
+
+        </header>
+
+
+
+        <main>
+
+            <div class="content">
+
+                <div class="ogrenci-listesi">
+
+                    <div class="search-bar">
+
+                        <input type="text" id="searchInput" class="search-input" placeholder="İsim veya numara ile ara...">
+
+                        <button id="tumunuGoster" class="filter-button active">Tümü</button>
+
+                        <button id="katilanlariGoster" class="filter-button">Katılanlar</button>
+
+                        <button id="katilmayanlariGoster" class="filter-button">Katılmayanlar</button>
+
+                    </div>
+
+                    <h2>
+
+                        Öğrenci Listesi
+
+                        <span class="count-badge" id="ogrenciSayisi">0</span>
+
+                    </h2>
+
+                    <div id="ogrenciListesi"></div>
+
+                </div>
+
+
+
+                <div class="katilmayanlar">
+
+                    <h2>
+
+                        <i class="fas fa-exclamation-triangle"></i>
+
+                        Katılmayanlar
+
+                        <span class="count-badge" id="katilmayanSayisi">0</span>
+
+                    </h2>
+
+                    <div id="katilmayanlarListesi"></div>
+
+                </div>
+
+            </div>
+
+        </main>
+
     </div>
-    <script src="script.js"></script>
-  </body>
-</html>
+
+
+
+    <!-- Yeni Öğrenci Modal -->
+
+    <div id="ogrenciModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2>
+
+                <i class="fas fa-user-plus"></i>
+
+                Yeni Öğrenci Ekle
+
+            </h2>
+
+            <form id="ogrenciForm">
+
+
+
+</html> 
